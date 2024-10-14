@@ -47,7 +47,23 @@ body {
   background-color: yellow;
 }
 
-.pressed {
+.pressed-yellow {
   box-shadow: 0 0 20px white;
-  background-color: grey;
+  background-image: url(./imges/thousand-yard-stare-staring-cat.gif);
 }
+
+.pressed-blue {
+  box-shadow: 0 0 20px white;
+  background-image: url(./imges/FZ_5BiFX0AAox13.jpg);
+}
+
+.pressed-green {
+  box-shadow: 0 0 20px white;
+  background-image: url(./imges/png-clipart-ronald-mcdonald-2016-clown-sightings-it-mcdonald-s-clown-ronald-mcdonald-clown-thumbnail.png);
+}
+
+.pressed-red {
+  box-shadow: 0 0 20px white;
+  background-image: url(./imges/IMG_0031000000000000.jpeg);
+}
+

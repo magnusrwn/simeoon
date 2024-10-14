@@ -34,8 +34,9 @@ $(".btn").on("click", function() {                          //checking for click
     playSound(userChosenColour);
 
     //storing the human-pressed button to animate
-    animatePress("#" + userChosenColour);
+    animatePress(userChosenColour);
     
+
     //geting the index of the last .pushed button click for the checkAns 
     var lengthForEnd = userClickedPattern.length;
     checkAnswer(userClickedPattern.lastIndexOf(userChosenColour));
@@ -47,9 +48,12 @@ function playSound(name) {
 }
 
 //animating the humans chosen button-press
-function animatePress(chosenButtonId) {
-    $(chosenButtonId).addClass("pressed");                                      //chaning the style to give a pressed effect
-    setTimeout(function() { $(chosenButtonId).removeClass("pressed");}, 200);   //setting the timeout of the thing i just did 
+function animatePress(chosenButton) {
+    var chosenButtonId = ("#" + chosenButton);
+    var classAnimate = ("pressed-" + chosenButton);
+
+    $(chosenButtonId).addClass(classAnimate);                                      //chaning the style to give a pressed effect
+    setTimeout(function() { $(chosenButtonId).removeClass(classAnimate);}, 200);   //setting the timeout of the thing i just did 
 }
 
 //checking for any keyboard press ("keydown")
